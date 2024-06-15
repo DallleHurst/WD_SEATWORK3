@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.header-design {
+  border: 1px solid #ddd;
+  margin: 20px 0;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Ensures images do not overflow */
+}
+
+.header-design img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.header-design .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.header-design .nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header-design .nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
+  padding: 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.header-design .nav-links a:hover {
+  color: #ff7e5f;
+  transform: scale(1.1);
+}
+
+/* Animated Header Specific Styles */
+
+#animated-header-1 .nav-links a:hover {
+  color: #ff7e5f; /* Color change on hover */
+}
+
+#animated-header-2 img {
+  animation: spin 10s linear infinite; /* Continuous rotation */
+}
+
+#animated-header-3 .nav-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+#animated-header-4 img {
+  transition: transform 0.3s;
+}
+
+#animated-header-4:hover img {
+  transform: rotate(360deg); /* Spin animation on hover */
+}
+
+#animated-header-5 {
+  background-color: #e74c3c;
+}
+
+#animated-header-5 .nav-links a {
+  transition: font-size 0.3s, background-color 0.3s;
+}
+
+#animated-header-5 .nav-links a:hover {
+  font-size: 24px;
+  background-color: #fff;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
