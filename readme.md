@@ -128,6 +128,6 @@ WD-ProjectName
 ## Resources
 
 <!-- TODO: Add References -->
-| Title | Purpose | Link |
+| SW3(Sir gawa) | Idea  | https://github.com/zyx-0314/WD-Seatwork-3 |
 |-|-|-|
 | Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
