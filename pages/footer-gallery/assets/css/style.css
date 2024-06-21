@@ -1,0 +1,314 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    padding-bottom: 100px; /* Ensure space for footer */
+    background: url('./assets/img/eggnot.gif') center/cover no-repeat fixed;
+}
+
+header {
+    background-color: #00000000;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: black;
+    border: 1px solid gold;
+    color: white;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-design {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-design .content {
+    padding: 20px;
+}
+
+.footer-design h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-design p {
+    font-size: 1em;
+}
+
+
+.static-footer-1, .static-footer-2, .static-footer-5 {
+    background-color: gold;
+}
+
+.static-footer-3, .static-footer-4 {
+    background-color: black;
+}
+
+.static-footer-1 .footer-icons a i,
+.static-footer-2 .footer-icons a i,
+.static-footer-3 .footer-icons a i,
+.static-footer-4 .footer-icons a i,
+.static-footer-5 .footer-icons a i {
+    color: #fff;
+}
+.static-footer-1 .company-logo {
+    width: 10%;
+}
+
+.static-footer-2 {
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+.static-footer-2 .content {
+    position: relative;
+    z-index: 1; /* Ensure content is above images */
+}
+
+.static-footer-2 .deldel,
+.static-footer-2 .deldel2 {
+    position: absolute;
+    width: 10%; /* Adjusted width */
+    top: 10%; /* Adjusted top position */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.static-footer-2 .deldel {
+    left: 5%; /* Adjusted left position */
+}
+
+.static-footer-2 .deldel2 {
+    right: 5%; /* Adjusted right position */
+}
+
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer-icons a {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 5px;
+}
+
+/* Animation Specific Styles */
+
+.animated-footer-1 {
+    background-color: gold;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    position: relative; /* Required for absolute positioning */
+}
+
+.animated-footer-1:hover {
+    background-color: rgb(108, 108, 108); /* Darker shade on hover */
+}
+
+.animated-footer-1 .content {
+    padding: 20px;
+}
+
+.animated-footer-1 .company-logo {
+    width: 10%; /* Adjusted size */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing issues */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scale */
+}
+
+.animated-footer-1:hover .company-logo {
+    transform: scale(0.05); /* Enlarge image on hover */
+}
+
+.animated-footer-1 .footer-icons {
+    margin-top: 10px;
+}
+
+.animated-footer-1 .footer-icons a i {
+    color: #fff; /* Set default color */
+    transition: color 0.3s; /* Add transition for smooth color change */
+}
+
+.animated-footer-1 .footer-icons a:hover i {
+    color: gold; /* Change color on hover */
+}
+
+.animated-footer-2 {
+    background-color: gold;
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-footer-2:before {
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    transition: transform 0.4s ease-out;
+    transform: translateY(-100%);
+}
+
+.animated-footer-2:hover:before {
+    transform: translateY(0);
+}
+
+.animated-footer-2 .content {
+    position: relative;
+    z-index: 1; /* Ensure content is above pseudo element */
+}
+
+.animated-footer-2 .deldel,
+.animated-footer-2 .deldel2 {
+    position: absolute;
+    width: 10%; /* Adjusted width */
+    top: 10%; /* Adjusted top position */
+    height: auto; /* Maintain aspect ratio */
+    animation: spin 3s linear infinite; /* Rotate animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.animated-footer-2 .deldel {
+    left: 5%; /* Adjusted left position */
+}
+
+.animated-footer-2 .deldel2 {
+    right: 5%; /* Adjusted right position */
+}
+
+
+.animated-footer-3 .footer-links a {
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    display: inline-block; /* Ensures the element can be rotated */
+    position: relative; /* Required for absolute positioning */
+    overflow: hidden; /* Ensure the overflow is hidden to contain the spinning element */
+    color: #fff; /* Default text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.animated-footer-3 .footer-links a:hover {
+    color: gold; /* Change color on hover */
+    text-decoration: underline;
+}
+
+.animated-footer-3 .footer-links a::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute; /* Positioning for spin elements */
+    top: 50%; /* Adjust vertically */
+    left: calc(100% + 5px); /* Adjust horizontally */
+    transform: translateY(-50%);
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    background-image: url('./path/to/your/spin-image.png'); /* Adjust path */
+    background-size: contain; /* Scale image to fit */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: center; /* Center image */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease-in-out; /* Transition effect */
+}
+
+.animated-footer-3 .footer-links a:hover::after {
+    opacity: 1; /* Show on hover */
+    animation: spin 1s linear infinite; /* Spin animation on hover */
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg); /* Full rotation */
+    }
+}
+
+.animated-footer-4 {
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-footer-4:hover {
+    background-color: gold; /* Darker shade of purple */
+    color: #333;
+}
+
+.animated-footer-5 {
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.animated-footer-5 .daledo {
+   width: 10%;
+}
+
+.animated-footer-5:active {
+    background-color: #00ffff; /* Darker shade of gray */
+}
+
+.animated-footer-5::before {
+    background-color: rgba(90, 90, 90, 0);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(''); /* Add your background image URL */
+    opacity: 0.3;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.animated-footer-5:active::before {
+    opacity: 0.6; /* Adjust opacity or add other effects as desired */
+}
+
+.footer-design.animated-footer-5:hover::before {
+    opacity: 0.6;
+}
+
+/* Footer at the bottom */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: gold;
+    color: #fff;
+    padding: 10px 0;
+}
